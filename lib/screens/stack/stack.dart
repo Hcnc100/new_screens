@@ -7,21 +7,27 @@ class StackScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: MainView());
-  }
-}
-
-class MessageView extends StatelessWidget {
-  const MessageView({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-          child: Text("Bienvenido")),
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              stops: [
+                0.5,
+                0.5
+              ],
+              colors: [
+                Color(0xff5EE8C5),
+                Color(0Xff30BAD6),
+              ]),
+        ),
+        child: PageView(
+          scrollDirection: Axis.vertical,
+          physics: const BouncingScrollPhysics(),
+          children: const [MainView(), ButtonPage()],
+        ),
+      ),
     );
   }
 }
