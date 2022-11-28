@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: AppRouters.routes,
-      initialRoute: AppRouters.detailsScreen.destination,
+      initialRoute: AppRouters.stackScreen.destination,
     );
   }
 }
