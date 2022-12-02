@@ -13,9 +13,15 @@ class AppRouters {
     destination: "stack",
     iconNav: Icons.stacked_bar_chart_outlined,
   );
+  static final gridScreen = Destination(
+    name: "Grid Screen",
+    destination: "grid",
+    iconNav: Icons.grid_goldenratio_outlined,
+  );
 
   static Map<String, Widget Function(BuildContext)> get routes => {
         detailsScreen.destination: (_) => const DetailsScreen(),
-        stackScreen.destination: (_) => const StackScreen()
+        stackScreen.destination: (_) => const StackScreen(),
+        gridScreen.destination: (_) => const GridScreen()
       };
 }
