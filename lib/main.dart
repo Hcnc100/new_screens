@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
     return MaterialApp(
       routes: AppRouters.routes,
-      initialRoute: AppRouters.gridScreen.destination,
+      initialRoute: AppRouters.initialRoute,
       theme: ThemeData.dark(),
     );
   }

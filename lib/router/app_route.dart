@@ -3,6 +3,8 @@ import 'package:new_screens/models/destination.dart';
 import 'package:new_screens/screens/screens.dart';
 
 class AppRouters {
+  static const initialRoute = "home";
+
   static final detailsScreen = Destination(
     name: "Details Screen",
     destination: "details",
@@ -22,6 +24,10 @@ class AppRouters {
   static Map<String, Widget Function(BuildContext)> get routes => {
         detailsScreen.destination: (_) => const DetailsScreen(),
         stackScreen.destination: (_) => const StackScreen(),
-        gridScreen.destination: (_) => const GridScreen()
+        gridScreen.destination: (_) => const GridScreen(),
+        initialRoute: (_) => const HomeScreen()
       };
+
+  static List<Destination> get listScreens =>
+      [detailsScreen, stackScreen, gridScreen];
 }
